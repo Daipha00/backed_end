@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Entity
 @Data
-@Table(name = "user")
+@Table(name = "user", schema = "public")
 @Transactional
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User {
