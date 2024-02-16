@@ -13,17 +13,21 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
     private String productName;
+
+    private String productType;
     private Integer productPrice;
+
     private Integer productDiscount;
 
 
     public Product() {
     }
 
-    public Product(Integer id, String productName, Integer productPrice, Integer productDiscount) {
+    public Product(Integer id, String productName, Integer productPrice, String productType, Integer productDiscount) {
         Id = id;
         this.productName = productName;
         this.productPrice = productPrice;
+        this.productType = productType;
         this.productDiscount = productDiscount;
     }
 
@@ -56,6 +60,9 @@ public class Product {
         return productDiscount;
     }
 
+    public String getProductType() {return productType; }
+
+    public void setProductType(String productType) {this.productType = productType; }
     public void setProductDiscount(Integer productDiscount) {
         this.productDiscount = productDiscount;
     }
